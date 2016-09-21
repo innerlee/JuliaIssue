@@ -7,7 +7,7 @@ mhand = Handle(C_NULL);
 ph = pointer([mhand])
 pstr = pointer("")
 
-ccall((Libdl.dlopen("liblib.so"), "fun"), Cint,
+ccall(Libdl.dlsym(Libdl.dlopen("liblib.so"), "fun"), Cint,
     (Handle, Cstring, Cstring,Handle, Handle, Handle, Handle, Ptr{Handle}),
     mhand, pstr, pstr, mhand, mhand, mhand, mhand, ph)
 
