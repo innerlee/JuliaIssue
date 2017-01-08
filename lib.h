@@ -1,12 +1,9 @@
 typedef struct {
-    void *p;
-} Handle;
+    size_t n;
+} Info;
 
-int fun(Handle hModel,
-        const char *id,
-        const char *typeName,
-        Handle inputIds,
-        Handle outputIds,
-        Handle attrNames,
-        Handle attrVals,
-        Handle* pLayerEntry);
+typedef void* Callback_handle_t;
+
+typedef int (*Callback_t)(Callback_handle_t h, Info *pinfo);
+
+int test(Callback_t fill_info);

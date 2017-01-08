@@ -1,11 +1,8 @@
 // gcc lib.c --share -o liblib.so
 #include "lib.h"
 
-int fun(Handle hModel,
-        const char *id,
-        const char *typeName,
-        Handle inputIds,
-        Handle outputIds,
-        Handle attrNames,
-        Handle attrVals,
-        Handle* pLayerEntry) {}
+int test(Callback_handle_t *ph, Callback_t triple_info)
+{
+    Info info;
+    triple_info(ph[0], &info)
+}
