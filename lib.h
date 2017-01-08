@@ -1,9 +1,9 @@
 typedef struct {
-    size_t n;
+    int n;
 } Info;
 
-typedef void* Callback_handle_t;
+typedef void* Julia_obj_handle_t;
 
-typedef int (*Callback_t)(Callback_handle_t h, Info *pinfo);
+typedef int (*Callback_t)(Julia_obj_handle_t h, Info *pinfo);
 
-int test(Callback_t fill_info);
+int test(Julia_obj_handle_t h, Callback_t get_info);

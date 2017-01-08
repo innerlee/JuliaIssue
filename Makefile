@@ -1,2 +1,2 @@
 hello: lib.c
-	gcc lib.c --share -o liblib.so
+	gcc lib.c --share -fPIC -o liblib.so
